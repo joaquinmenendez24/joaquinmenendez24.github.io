@@ -16,13 +16,48 @@
   </style>
 </head>
 
-<body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+<body class="bg-light">
+<form action="file:///C:/Users/Usuario/Desktop/Proyecto%20JaP/Entrega_1/Individual/47844100_Entrega1/joaquinmenendez24.github.io/index.html">
+  <div class="container"> <!-- En esta parte del HTML, creamos los recuadros donde el usuario ingresara sus datos. Junto con el boton que tendra el evento click. -->
+      <div class="row mt-4">
+        <div class="col">
+          <h1 class="mb-3">Iniciar Sesion</h1>
+          <hr style="width: 400px;">
+          <div class="row g-3" style="width: 400px;">
+            
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="correo"  required>
+            </div>
+
+            <div class="col-sm-12">
+              <label for="password1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contra" required>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="recordar">
+              <label class="form-check-label" for="terminos">Recordar Datos</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="regBtn">Ingresar</button>
+
+          </div>
+        </div>
       </div>
+</form>     
+
+
+    <div class="alert alert-success alert-dismissible fade" role="alert" id="alert-success"> <!-- Muestra la alerta con un parrafo en caso que se ingresaron los datos correctamente -->
+      <p>Datos Correctos</p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+  
+    <div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger"> <!-- Muestra la alerta con un parrafo en caso que no se ingresaron los datos correctamente -->
+      <p>Los datos ingresados no cumplen con los requisitos solicitados</p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  
   </main>
   <footer class="text-muted">
     <div class="container">
