@@ -39,3 +39,8 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+
+let correo = JSON.parse(localStorage.getItem("usuario")) //Paso la informacion del local storage, la traduzco para poder usar en Java
+document.getElementById("nombreusuario").innerHTML += correo;
+console.log(correo);
