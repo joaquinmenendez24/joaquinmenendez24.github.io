@@ -2,10 +2,11 @@ function showAlertError() { //Funcion para cuando se ingresen los datos mal
     document.getElementById("alert-danger").classList.add("show");
 }
 
-let correo = ""
+let correo = []
+
 function hayCamposVacios() { //Funcion que corrobora si hay o no datos vacios
-    correo = document.getElementById("correo").value
-    contra = document.getElementById("contra").value
+    correo = document.getElementById("correo").value //Trae el valor ingresado en el input con id correo y lo guarda en una variable
+    contra = document.getElementById("contra").value //Trae el valor ingresado en el input con id contra y lo guarda en una variable
 
     if (!correo || !contra) {
         return true;
@@ -19,7 +20,7 @@ function validarFormulario() { //Funcion que valida el formulario y muertas las 
         showAlertError();
         return false;
     } else {
-        document.getElementById("usuariomostrar").innerHTML(correo)
+        localStorage.setItem("usuario", JSON.stringify(correo)); //Guarda en el local storage lo ingresado e en el input con id correo
         return true;
     }
 }

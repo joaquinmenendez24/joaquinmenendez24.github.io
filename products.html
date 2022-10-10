@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link" href="home.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -31,20 +31,66 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">AAA</a>
-          </li>
-          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="nombreusuario" data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+                <li><a class="dropdown-item" href="index.html">Cerrar Sesion</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <main class="pb-5 container">
-      <div class="container" id="container">
-        <h1 class="text-center p-4">Productos</h1>
-        <p class="text-center p-4" >Veras aqui todos los productos de la categoria Autos</p>
+  <h1 class="text-center p-4">Productos</h1>
+  <p class="text-center p-4" >Veras aqui todos los productos de la categoria seleccionada</p>
+  <main class="pb-5"> <!--Empezamos a armar los botones para filtra-->
+    <div class="container">
+      <div class="row">
+        <div class="col text-end">
+          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+            <input type="radio" class="btn-check" name="options">
+            <label class="btn btn-light" for="sortAsc" id="ascendente"><i class="fas fa-sort-amount-up mr-1"></i> Mayor Precio</label>
+            <input type="radio" class="btn-check" name="options">
+            <label class="btn btn-light" for="sortDesc" id="descendente"><i class="fas fa-sort-amount-down mr-1"></i> Menor Precio</label>
+            <input type="radio" class="btn-check" name="options" checked>
+            <label class="btn btn-light" for="sortByCount" id="stock"><i class="fas fa-sort-amount-down mr-1"></i> Articulos Vendidos</label>
+          </div>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-end my-2">Precio</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="minimo">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="maximo">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="list-group" id="cat-list-container">
+        </div>
+      </div>
+    </div>
+    <div class="container" id="container" href="home.html">
+    </div>
   </main>
+    
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -66,6 +112,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/product-info.js"></script>
 
 
 </body>
