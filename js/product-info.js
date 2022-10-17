@@ -15,7 +15,7 @@ fetch(urlProduct) //Comienzo la peiticion de la informacion a la url
         <div>
         <h1 style="font-size:30px;">${product.name}</h1>
         </div>
-        <br>
+        <p align="right"> <input type="button" id="buttonCart" value="Añadir al carrito" /></p>
         <hr>
         <div>
         <h2><b style="font-size:15px;">Precio</b></h2>

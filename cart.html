@@ -45,11 +45,36 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <div class="container" id="userCart">
     </div>
+    <div class="container">
+      <h5>Tipo de envío</h5>
+      <input name="elegir" type="radio" />Premium 2 a 5 dias (15%)
+      <br />
+      <input name="elegir" type="radio" />Express 5 a 8 dias (7%)
+      <br />
+      <input name="elegir" type="radio" />Premium 12 a 15 dias (5%)
+    <div>
+    <br>
+    <div>
+      <h4>Direccion de envio</h4>
+    </div>
+    <form>
+      <div class="row" style="width: 1050px;">
+          <div class="col">
+              <p>Calle</p>
+              <input type="text" class="form-control">
+          </div>
+          <div class="col">
+              <p>Numero</p>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+      <div class="col" style="width: 500px;">
+          <p>Esquina</p>
+          <input type="text" class="form-control">
+      </div>
+    </form>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -71,7 +96,9 @@
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+  <script src="js/cart.js"></script> 
+  <script src="js/product-info.js"></script>
+
 </body>
 
 </html>
