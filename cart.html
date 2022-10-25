@@ -59,7 +59,6 @@
     <div>
       <h4>Direccion de envio</h4>
     </div>
-    <form>
       <div class="row" style="width: 1050px;">
           <div class="col">
               <p>Calle</p>
@@ -74,7 +73,81 @@
           <p>Esquina</p>
           <input type="text" class="form-control">
       </div>
-    </form>
+      <div class="container">
+        <hr class="mb-4">
+          <h4 class="mb-3">Costos</h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Subtotal</h6>
+                  <small class="text-muted">Costo unitario del producto por cantidad</small>
+                </div>
+                <span class="text-muted" id="subtotal">-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Costo de envio</h6>
+                  <small class="text-muted">Según el tipo de envio</small>
+                </div>
+                <span class="text-muted" id="costoenvio">-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total ($)</span>
+                <strong id="total"></strong>
+              </li>
+            </ul>
+        <hr class="mb-4">
+      </div>     
+      <div>
+        <h4 class="mb-3">Forma de pago</h4>
+        <div class="rows=3">
+          <small class="text-muted">No se ha seleccionado</small>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Seleccionar
+          </button>
+        </div>
+      </div>
+      <hr>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Froma de Pago</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input name="elegir" type="radio" />Tarjeta de credito
+              <hr>
+            </div>
+            <div class="row" style="width: 500px;">
+              <div class="col">
+                  <p>Numero de tarjeta</p>
+                  <input type="text" class="form-control">
+              </div>
+              <div class="col">
+                  <p>Cdogido de seg</p>
+                  <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col" style="width: 225px">
+              <p>Vencimiento (MM/AA)</p>
+              <input type="text" class="form-control">
+            </div>
+            <div class="modal-body">
+              <input name="elegir" type="radio" />Transferencia bancaria
+              <hr>
+            </div>
+            <div class="col" style="width: 225px">
+              <p>Numero de cuenta</p>
+              <input type="text" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button class="btn btn-primary" type="button">Finalizar compra</button>    
   </main>
   <footer class="text-muted">
     <div class="container">

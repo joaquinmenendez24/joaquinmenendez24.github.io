@@ -7,7 +7,6 @@ fetch(urlCart) //Comienzo la peiticion de la informacion a la url
 .then(function(jsonResult){ //Aqui devuelve los datos obtenidos de la url luego de pasarlos a tipo Json
     cart = jsonResult;
     console.log(cart)
-    let input = `${cart.articles[0].count}`
     let htmlToAppend = `
     <div class="text-center p-4">
         <h2>Carrito de compras</h2>
@@ -29,7 +28,7 @@ fetch(urlCart) //Comienzo la peiticion de la informacion a la url
                 <th scope="row"><img src=${cart.articles[0].image} width="50px"></img></th>
                 <td>${cart.articles[0].name}</td>
                 <td>${cart.articles[0].currency + " " + cart.articles[0].unitCost}</td>
-                <td><input type="number" id="input" value="${input}" style="width: 50px;"></input></td>
+                <td><input type="number" id="input" value="${cart.articles[0].count}" style="width: 50px;"></input></td>
                 <td><b id="subtotal"></b></td>
             </tr>
         </tbody>
