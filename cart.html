@@ -48,31 +48,35 @@
     <div class="container" id="userCart">
     </div>
     <div class="container">
-      <h4>Tipo de envío</h4>
-      <input name="elegir" type="radio" id="option1"/>Premium 2 a 5 dias (15%)
-      <br />
-      <input name="elegir" type="radio" id="option2"/>Express 5 a 8 dias (7%)
-      <br />
-      <input name="elegir" type="radio" id="option3" />Premium 12 a 15 dias (5%)
-    <div>
-    <br>
-    <div>
-      <h4>Direccion de envio</h4>
-    </div>
-    <div class="row" style="width: 1050px;">
-        <div class="col">
-          <p>Calle</p>
-          <input type="text" class="form-control" id="calle" required>
+      <form class="row g-3 needs-validation" novalidate></form>
+        <div class="container">
+          <h4>Tipo de envío</h4>
+          <input name="elegir" type="radio" id="option1"/>Premium 2 a 5 dias (15%)
+          <br />
+          <input name="elegir" type="radio" id="option2"/>Express 5 a 8 dias (7%)
+          <br />
+          <input name="elegir" type="radio" id="option3" />Premium 12 a 15 dias (5%)
+        <div>
+        <br>
+        <div>
+          <h4>Direccion de envio</h4>
         </div>
-        <div class="col">
-          <p>Numero</p>
-          <input type="text" class="form-control" id="Numero" required>
+        <div class="row" style="width: 1050px;">
+            <div class="col">
+              <p>Calle</p>
+              <input type="text" class="form-control" id="calle" required>
+            </div>
+            <div class="col">
+              <p>Numero</p>
+              <input type="text" class="form-control" id="Numero" required>
+            </div>
         </div>
-    </div>
-    <br>
-    <div class="col" style="width: 500px;">
-        <p>Esquina</p>
-        <input type="text" class="form-control" id="esquina" required>
+        <br>
+        <div class="col" style="width: 500px;">
+            <p>Esquina</p>
+            <input type="text" class="form-control" id="esquina" required>
+        </div>
+      </form>
     </div>
     <div>
       <hr>

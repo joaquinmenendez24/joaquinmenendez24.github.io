@@ -78,7 +78,7 @@ document.getElementById('transferencia').addEventListener('click', function() {
     document.getElementById('codseguridad').disabled = true;
     document.getElementById('vencimiento').disabled = true;
     document.getElementById('numcuenta').disabled = false;
-    pago.innerHTML = "Transferencia Bancaria"
+    pago.innerHTML = "Transferencia bancaria"
   });
 })
 
