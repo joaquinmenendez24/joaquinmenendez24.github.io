@@ -48,106 +48,110 @@
     <div class="container" id="userCart">
     </div>
     <div class="container">
-      <h5>Tipo de envío</h5>
-      <input name="elegir" type="radio" />Premium 2 a 5 dias (15%)
+      <h4>Tipo de envío</h4>
+      <input name="elegir" type="radio" id="option1"/>Premium 2 a 5 dias (15%)
       <br />
-      <input name="elegir" type="radio" />Express 5 a 8 dias (7%)
+      <input name="elegir" type="radio" id="option2"/>Express 5 a 8 dias (7%)
       <br />
-      <input name="elegir" type="radio" />Premium 12 a 15 dias (5%)
+      <input name="elegir" type="radio" id="option3" />Premium 12 a 15 dias (5%)
     <div>
     <br>
     <div>
       <h4>Direccion de envio</h4>
     </div>
-      <div class="row" style="width: 1050px;">
-          <div class="col">
-              <p>Calle</p>
-              <input type="text" class="form-control">
-          </div>
-          <div class="col">
-              <p>Numero</p>
-              <input type="text" class="form-control">
-          </div>
-      </div>
-      <div class="col" style="width: 500px;">
-          <p>Esquina</p>
-          <input type="text" class="form-control">
-      </div>
-      <div class="container">
-        <hr class="mb-4">
-          <h4 class="mb-3">Costos</h4>
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Subtotal</h6>
-                  <small class="text-muted">Costo unitario del producto por cantidad</small>
-                </div>
-                <span class="text-muted" id="subtotal">-</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Costo de envio</h6>
-                  <small class="text-muted">Según el tipo de envio</small>
-                </div>
-                <span class="text-muted" id="costoenvio">-</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Total ($)</span>
-                <strong id="total"></strong>
-              </li>
-            </ul>
-        <hr class="mb-4">
-      </div>     
-      <div>
-        <h4 class="mb-3">Forma de pago</h4>
-        <div class="rows=3">
-          <small class="text-muted">No se ha seleccionado</small>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Seleccionar
-          </button>
+    <div class="row" style="width: 1050px;">
+        <div class="col">
+          <p>Calle</p>
+          <input type="text" class="form-control" id="calle" required>
         </div>
-      </div>
+        <div class="col">
+          <p>Numero</p>
+          <input type="text" class="form-control" id="Numero" required>
+        </div>
+    </div>
+    <br>
+    <div class="col" style="width: 500px;">
+        <p>Esquina</p>
+        <input type="text" class="form-control" id="esquina" required>
+    </div>
+    <div>
       <hr>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Froma de Pago</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <input name="elegir" type="radio" />Tarjeta de credito
-              <hr>
-            </div>
+        <h4>Costos</h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Subtotal</h6>
+                <small class="text-muted">Costo unitario del producto por cantidad</small>
+              </div>
+              <span class="text-muted" id="subtotal2">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Costo de envio</h6>
+                <small class="text-muted">Según el tipo de envio</small>
+              </div>
+              <span class="text-muted" id="costoenvio">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total ($)</span>
+              <strong id="total"></strong>
+            </li>
+          </ul>
+      <hr class="mb-4">
+    </div>     
+    <div>
+      <h4 class="mb-3">Forma de pago</h4>
+      <div class="rows=3">
+        <small class="text-muted" id="formadepago">No se ha seleccionado</small>
+        <button type="button link" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Seleccionar
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Froma de Pago</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input name="elegir" type="radio" id="tarjeta"/>Tarjeta de credito
+            <hr>
             <div class="row" style="width: 500px;">
               <div class="col">
-                  <p>Numero de tarjeta</p>
-                  <input type="text" class="form-control">
+                <p>Numero de tarjeta</p>
+                <input type="text" class="form-control" id="numtarjeta">
               </div>
               <div class="col">
-                  <p>Cdogido de seg</p>
-                  <input type="text" class="form-control">
+                <p>Codigo de seg.</p>
+                <input type="text" class="form-control" style="width: 125px" id="codseguridad">
               </div>
             </div>
-            <div class="col" style="width: 225px">
+            <div class="col">
+              <br>
               <p>Vencimiento (MM/AA)</p>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" style="width: 225px" id="vencimiento">
             </div>
-            <div class="modal-body">
-              <input name="elegir" type="radio" />Transferencia bancaria
-              <hr>
-            </div>
+          </div>
+          <div class="modal-body">
+            <input name="elegir" type="radio" id="transferencia" />Transferencia bancaria
+            <hr>
             <div class="col" style="width: 225px">
               <p>Numero de cuenta</p>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id="numcuenta">
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
-    <button class="btn btn-primary" type="button">Finalizar compra</button>    
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button" id="botonfinal">Finalizar Compra</button>
+    </div>    
   </main>
   <footer class="text-muted">
     <div class="container">
