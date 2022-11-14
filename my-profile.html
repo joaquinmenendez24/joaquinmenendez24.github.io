@@ -46,7 +46,7 @@
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="nombreusuario" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
@@ -60,11 +60,41 @@
     </div>
   </nav>
   <main>
+  <form class="needs-validation" id="perfil-info">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 order-md-12">
+          <h4 class="mb-3">Perfil</h4>
+          <hr>
+            <div class="row" style="width: 1050px;">
+              <div div class="col">
+                <label for="adress-street">Primer Nombre</label>
+                <input type="text" class="form-control" id="nombredeusuario" value="" name="nombredeusuario" required>
+                <div class="col">
+                    <label for="adress-number">Primer Apellido</label>
+                    <input type="text" class="form-control" id="apellidousuario" value="" name="apellidousuario" required>
+                </div>
+                <div class="col">
+                  <label for="adress-number">E-mail</label>
+                  <input type="text" class="form-control" id="email" value="" name="email" required>
+              </div>
+              </div>
+              <br>
+              <div class="col" style="width: 500px;">
+                <label for="adress-corner">Segundo Nombre</label>
+                <input type="text" class="form-control" id="segundonombre" value="" name="segundonombre">
+                <label for="adress-corner">Segundo Apellido</label>
+                <input type="text" class="form-control" id="segundoapellido" value="" name="segundoapellido">
+                <label for="adress-corner">Telefono de Contacto</label>
+                <input type="number" class="form-control" id="telefono" value="" name="telefono">
+              </div>
+            </div>	
+              <br>
+              <hr>
+              <div>
+                <button class="btn btn-primary" type="submit" id="guardarbutton">Guardar Cambios</button>
+              </div>
+  </form>
   </main>
   <footer class="text-muted">
     <div class="container">

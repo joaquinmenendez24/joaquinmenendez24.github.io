@@ -21,6 +21,8 @@ function validarFormulario() { //Funcion que valida el formulario y muertas las 
         return false;
     } else {
         localStorage.setItem("usuario", JSON.stringify(correo)); //Guarda en el local storage lo ingresado e en el input con id correo
+        localStorage.removeItem("nombredeusuario")
+        localStorage.removeItem("apellidousuario")
         return true;
     }
 }
